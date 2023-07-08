@@ -60,6 +60,8 @@ export function DataReducer(state, action) {
         ...state,
         restaurants: updatedRestaurants,
       };
+      localStorage.setItem("restaurants", JSON.stringify(updatedRestaurants));
+
       break;
     }
   }
