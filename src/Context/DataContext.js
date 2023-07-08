@@ -7,7 +7,6 @@ export const DataContext = createContext();
 
 export function DataContextProvider({ children }) {
   const [state, dispatch] = useReducer(DataReducer, initialState);
-  console.log(localStorage.getItem("restaurants"));
   useEffect(() => {
     if (localStorage.getItem("restaurants")) {
       dispatch({
