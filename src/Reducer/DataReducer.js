@@ -38,22 +38,20 @@ export function DataReducer(state, action) {
     }
     case ActionTypes.ADD_REVIEW: {
       const updatedRestaurants = state.restaurants.map((restaurant) => {
-        if (restaurant.id === action.payload.restaurantId) {
-          const updatedRestaurant = {
+        if (restaurant.id === +action.payload.restaurantId) {
+          const updatedRestaurants = {
             ...restaurant,
             ratings: [
               ...restaurant.ratings,
               {
-                rating: Number(...action.payload.rating),
+                rating: action.payload.rating,
                 comment: action.payload.comment,
                 revName: "Ana",
                 pp: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5tbKdv1HDbAjPc526SK0yDZuoOmaaOyGNoj_e1q3ngruK2bTqzub3&s=0",
               },
             ],
           };
-          console.log("updatedRestaurant");
-          console.log(updatedRestaurant);
-          return updatedRestaurant;
+          return updatedRestaurants;
         } else {
           return restaurant;
         }

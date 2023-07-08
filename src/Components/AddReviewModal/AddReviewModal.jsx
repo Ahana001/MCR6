@@ -86,11 +86,11 @@ export function AddReviewModal() {
                 } else if (reviewData.rating === "SelectRating") {
                   CustomizeToast("warning", "Please Select Rating");
                 } else {
-                  console.log("ADD_REVIEW");
                   dispatch({
                     type: ActionTypes.ADD_REVIEW,
                     payload: {
-                      review: { ...reviewData, restaurantId: restaurantId },
+                      ...reviewData,
+                      restaurantId: restaurantId,
                     },
                   });
                   setIsReviewModalVisible(false);
