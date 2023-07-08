@@ -1,0 +1,92 @@
+.ModalPortal {
+  position: fixed;
+  inset: 0rem;
+  background-color: transparent;
+  z-index: 999999;
+  overflow-y: scroll;
+}
+.ModalPortal::-webkit-scrollbar {
+  display: none;
+}
+.ModalOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.ModalPortalContent {
+  color: white;
+  background-color: #e53e3e;
+  border-radius: 1.2rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 12rem;
+}
+.ModalPortalCloseButton {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.ReviewInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ReviewInputContainer h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.RatingContainer,
+.CommentContainer {
+  gap: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+.RatingDropDown {
+  width: 12rem;
+  height: 3rem;
+  background-color: white;
+  cursor: pointer;
+}
+.CommentContainer textarea {
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 0.36rem;
+  padding: 1rem 0.5rem;
+}
+.submitButton {
+  height: 3rem;
+  width: 10rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.36rem;
+  margin-top: 2rem;
+}
+.submitButton:disabled {
+  background-color: rgb(176, 176, 176);
+}
+@media (width <= 395px) {
+  .RatingContainer,
+  .CommentContainer {
+    gap: 0.5rem;
+  }
+  .ModalOverlay {
+    padding: 0.1rem;
+  }
+  .RatingDropDown {
+    width: 6rem;
+  }
+}

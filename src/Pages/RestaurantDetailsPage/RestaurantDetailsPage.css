@@ -1,0 +1,56 @@
+.RestaurantDetailsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.RestaurantName {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+.RestaurantDishes,
+.RestaurantAddress,
+.RestaurantAverageRating {
+  color: rgb(149, 145, 145);
+  font-size: 1.2rem;
+}
+.RestaurantDetailsHeader button {
+  height: 3rem;
+  border-radius: 0.36rem;
+  background-color: #e53e3e;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.HorizontalLine {
+  height: 0.1rem;
+  width: 100%;
+  background-color: rgb(209, 206, 206);
+}
+.ReviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+.RestaurantDetailsReviewHeader {
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin: 2rem 0rem;
+}
+.BackButton {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  margin: 1rem;
+  color: black;
+}
